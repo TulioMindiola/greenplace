@@ -30,7 +30,7 @@ function clock(minutes) {
   const h24 = Math.floor(minutes / 60);
   const m = String(minutes % 60).padStart(2, '0'); // taste-skill-ignore: clock minutes
   const h = h24 % 12 === 0 ? 12 : h24 % 12;
-  return `${h}:${m} ${h24 < 12 ? 'a. m.' : 'p. m.'}`;
+  return `${h}:${m} ${h24 < 12 ? 'a. m.' : 'p. m.'}`; // non-breaking: the time never splits
 }
 
 function sedeStatus(key, t) {
